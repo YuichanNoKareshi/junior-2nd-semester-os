@@ -1,0 +1,30 @@
+*** make qemu-gdb'.
+***
+boot: init_c
+[BOOT] Install boot page table
+[BOOT] Enable el1 MMU
+[BOOT] Jump to kernel main
+[2J[INFO] [ChCore] uart init finished
+[INFO] Address of main() is 0xffffff000008c08c
+[INFO] 123456 decimal is 0361100 octal
+[INFO] entering stack_test 5
+[INFO] entering stack_test 4
+[INFO] entering stack_test 3
+[INFO] entering stack_test 2
+[INFO] entering stack_test 1
+[INFO] entering stack_test 0
+Stack backtrace:
+LR ffffff000008c070 FP ffffff0000092050 Args 0 0 0 0 0 
+LR ffffff000008c070 FP ffffff0000092070 Args 1 ffffffc0 ffffff0000092090 ffffff000008c070 2 
+LR ffffff000008c070 FP ffffff0000092090 Args 2 ffffffc0 ffffff00000920b0 ffffff000008c070 3 
+LR ffffff000008c070 FP ffffff00000920b0 Args 3 ffffffc0 ffffff00000920d0 ffffff000008c070 4 
+LR ffffff000008c070 FP ffffff00000920d0 Args 4 ffffffc0 ffffff00000920f0 ffffff000008c070 5 
+LR ffffff000008c0d4 FP ffffff00000920f0 Args 5 ffffffc0 ffffff0000092110 ffffff000008c0d4 0 
+LR ffffff000008c018 FP ffffff0000092110 Args 0 ffffffc0 0 ffffff000008c018 0 
+[INFO] leaving stack_test 0
+[INFO] leaving stack_test 1
+[INFO] leaving stack_test 2
+[INFO] leaving stack_test 3
+[INFO] leaving stack_test 4
+[INFO] leaving stack_test 5
+qemu-system-aarch64: terminating on signal 15 from pid 11288 (make)
