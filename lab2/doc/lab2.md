@@ -38,6 +38,8 @@ extern unsigned long *img_end;
     + 页的大小为4K，页表项的大小为8byte，则4G物理内存最多需要4G/4K*8byte=8M空间开销
     + 使用多级页表，可以在虚拟地址空间未被全部使用的情况下减少页表页的个数，从而降低空间开销
 2. 总结一下x86-64和AArch64地址翻译机制的区别，AArch64 MMU架构设计的优点是什么?
+    + AArch64采用了两个页表基地址寄存器，x86-64架构中只有一个页表基地址寄存器。这样在性能和安全角度都提供了较高的保证
+    + AArch64允许页表页L1、L2的pte直接指向block，这样在访问大量连续的内存时可以减少换页的开销
 
 ### 练习2：在文件kernel/mm/page_table中，实现map_range_in_pgtbl()，unmap_range_in_pgtbl()和query_in_pgtbl() 
 &emsp;&emsp;见代码
