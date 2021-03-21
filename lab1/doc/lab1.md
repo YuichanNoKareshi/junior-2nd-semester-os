@@ -14,7 +14,7 @@
 
 
 ### 练习2：
-```
+```c++
 0x0000000000080000 in ?? ()
 (gdb) where
 #0  0x0000000000080000 in _start ()
@@ -22,7 +22,7 @@ Backtrace stopped: not enough registers or memory available to unwind further
 ```
 
 ### 练习3：
-```
+```c++
 ~/chcore-lab-2021$ readelf -S build/kernel.img
 There are 9 section headers, starting at offset 0x20cd8:
 
@@ -56,7 +56,7 @@ Key to Flags:
 ```
 &emsp;&emsp;可以看到入口init的地址为0x80000，即上一题的_start()，而_start()函数位于./boot/start.S文件中，因此build/kernel.image入口定义在./boot/start.S中
 
-```
+```c++
 #include <common/asm.h>
 
 .extern arm64_elX_to_el1
@@ -93,7 +93,7 @@ END_FUNC(_start)
 &emsp;&emsp;可以看到，处理器启动后_start()函数先把mpidr_el1的值存入x8，随后检查x8是否为0。若为0则正常执行操作，非0则以死循环的方式挂起。因此只有一个处理器启动，其他二级处理器被挂起
 
 ### 练习4
-```
+```c++
 ~/chcore-lab-2021$ objdump -h build/kernel.img
 
 build/kernel.img:     file format elf64-little
@@ -114,7 +114,7 @@ Idx Name          Size      VMA               LMA               File off  Algn
 &emsp;&emsp;init的VMA和LMA是相同的,其他段的VMA都比LMA多0xffffff0000000000，因为init段中储存的是bootLoader的代码，其他段储存内核的代码。内核代码会完成从物理内存到虚拟内存的映射，即从低地址(LMA)到高地址(VMA)，因此VMA数值大于LMA。
 
 ### 练习5
-```
+```c++
     if (sign && base == 10 && i < 0)
 	{
 		neg = 1;
@@ -171,14 +171,14 @@ Idx Name          Size      VMA               LMA               File off  Algn
 &emsp;&emsp;一定要借助一个临时数组从前往后填入，不能从后往前，否则会有空缺。
 
 ### 练习6
-```
+```c++
     /* Prepare stack pointer and jump to C. */
         adr 	x0, boot_cpu_stack
         add 	x0, x0, #0x1000
         mov 	sp, x0
 ```
 &emsp;&emsp;内核栈初始化的代码位于./boot/start.S
-```
+```c++
 #define INIT_STACK_SIZE 0x1000
 char boot_cpu_stack[PLAT_CPU_NUMBER][INIT_STACK_SIZE] ALIGN(16);
 ```
@@ -186,7 +186,7 @@ char boot_cpu_stack[PLAT_CPU_NUMBER][INIT_STACK_SIZE] ALIGN(16);
 
 ### 练习7
 &emsp;&emsp;GDB中输出如下
-```
+```c++
 0x0000000000080000 in ?? ()
 (gdb) b stack_test
 Breakpoint 1 at 0xffffff000008c020
@@ -252,7 +252,7 @@ Thread 1 hit Breakpoint 1, 0xffffff000008c020 in stack_test ()
 0xffffff00000920b0 <kernel_stack+8080>:	0xffffff00000920d0	0xffffff000008c070
 ```
 &emsp;&emsp;而带有GDB调试的QEMU中输出如下
-```
+```c++
 [INFO] [ChCore] uart init finished
 [INFO] Address of main() is 0xffffff000008c08c
 [INFO] 123456 decimal is 0361100 octal
@@ -263,7 +263,7 @@ Thread 1 hit Breakpoint 1, 0xffffff000008c020 in stack_test ()
 [INFO] entering stack_test 1
 ```
 &emsp;&emsp;结合GDB和QEMU中的输出，我们可以得出规律，每个stack_test递归嵌套级别将4个64位值压入堆栈。以最后一次调用为例，来具体说明这些值的意义
-```
+```c++
 0xffffff0000092070 <kernel_stack+8016>:	0xffffff0000092090	0xffffff000008c070
 0xffffff0000092080 <kernel_stack+8032>:	0x0000000000000002	0x00000000ffffffc0
 0xffffff0000092090 <kernel_stack+8048>:	0xffffff00000920b0	0xffffff000008c070
@@ -273,7 +273,7 @@ Thread 1 hit Breakpoint 1, 0xffffff000008c020 in stack_test ()
 &emsp;&emsp;从92070到92080为该函数的栈帧，从92080到920a0是上一个函数的栈帧。92070处为FP，他储存的是上一个函数的FP地址（92090），92078处为LR（返回地址）。92080处为上一个函数的参数（1），92088处保存某个寄存器的值
 
 ### 练习8
-```
+```c++
 (gdb) x/30i stack_test
 => 0xffffff000008c020 <stack_test>:	stp	x29, x30, [sp, #-32]!
    0xffffff000008c024 <stack_test+4>:	mov	x29, sp
@@ -302,7 +302,7 @@ Thread 1 hit Breakpoint 1, 0xffffff000008c020 in stack_test ()
 ![avatar][picture]
 
 ### 练习9
-```
+```c++
      printk("Stack backtrace:\n");
 
      // Your code here.

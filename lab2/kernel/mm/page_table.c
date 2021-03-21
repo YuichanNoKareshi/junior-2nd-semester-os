@@ -91,7 +91,7 @@ static int get_next_ptp(ptp_t * cur_ptp, u32 level, vaddr_t va,
 	pte_t *entry;
 
 	if (cur_ptp == NULL)
-		return -ENOMAPPING;
+		return -ENOMAPPING; // -14
 
 	switch (level) {
 	case 0:
@@ -113,7 +113,7 @@ static int get_next_ptp(ptp_t * cur_ptp, u32 level, vaddr_t va,
 	entry = &(cur_ptp->ent[index]);
 	if (IS_PTE_INVALID(entry->pte)) {
 		if (alloc == false) {
-			return -ENOMAPPING;
+			return -ENOMAPPING; // -14
 		} else {
 			/* alloc a new page table page */
 			ptp_t *new_ptp;
@@ -139,9 +139,9 @@ static int get_next_ptp(ptp_t * cur_ptp, u32 level, vaddr_t va,
 	*next_ptp = (ptp_t *) GET_NEXT_PTP(entry);
 	*pte = entry;
 	if (IS_PTE_TABLE(entry->pte))
-		return NORMAL_PTP;
+		return NORMAL_PTP; // 0
 	else
-		return BLOCK_PTP;
+		return BLOCK_PTP; // 1
 }
 
 /*
@@ -162,9 +162,42 @@ static int get_next_ptp(ptp_t * cur_ptp, u32 level, vaddr_t va,
 int query_in_pgtbl(vaddr_t * pgtbl, vaddr_t va, paddr_t * pa, pte_t ** entry)
 {
 	// <lab2>
+	ptp_t* temp_tbl = (ptp_t*)pgtbl;
+	pte_t* temp_pte;
+	int status;
 
+	for (int i = 0; i <= 3; i++)
+	{
+		status = get_next_ptp(temp_tbl, i, va, &temp_tbl, &temp_pte, 0);
+		if (status < 0)
+			return status;
+
+		switch (i)
+		{
+		case 0:
+			break;
+		case 1:
+			if (status == BLOCK_PTP)
+			{
+				*pa = (temp_pte->l1_block.pfn << L1_INDEX_SHIFT) | GET_VA_OFFSET_L1(va);
+				return 0;
+			}
+			break;
+		case 2:
+			if (status == BLOCK_PTP)
+			{
+				*pa = (temp_pte->l2_block.pfn << L2_INDEX_SHIFT) | GET_VA_OFFSET_L2(va);
+				return 0;
+			}
+			break;
+		case 3:
+			*pa = (temp_pte->l3_page.pfn << L3_INDEX_SHIFT) | GET_VA_OFFSET_L3(va);
+			return 0;
+		default: return 0;
+		}
+	}
+	
 	// </lab2>
-	return 0;
 }
 
 /*
@@ -186,7 +219,36 @@ int map_range_in_pgtbl(vaddr_t * pgtbl, vaddr_t va, paddr_t pa,
 		       size_t len, vmr_prop_t flags)
 {
 	// <lab2>
+	len = ROUND_UP(len, PAGE_SIZE); // set len to be integer multiples of PAGE_SIZE
+	vaddr_t va_edge = va + len;
+	
+	while (va < va_edge)
+	{
+		ptp_t* temp_tbl = (ptp_t*)pgtbl;
+		pte_t* temp_pte;
+		for (int i = 0; i < 3; i++) // get the each level page table entries
+		{
+			int status = get_next_ptp(temp_tbl, i, va, &temp_tbl, &temp_pte, 1);
+			if (status < 0)
+			{
+				return status;
+			}
+				
+		}
 
+		temp_pte = &(temp_tbl->ent[GET_L3_INDEX(va)]); // now temp_tbl is at l3_page, get corresponding pte
+		set_pte_flags(temp_pte, flags, USER_PTE);
+
+		temp_pte->pte = 0;
+		temp_pte->l3_page.pfn = pa >> PAGE_SHIFT;
+		temp_pte->l3_page.is_valid = 1;
+		temp_pte->l3_page.is_page = 1;
+
+		va += PAGE_SIZE;
+		pa += PAGE_SIZE;
+	}
+
+	flush_tlb();
 	// </lab2>
 	return 0;
 }
@@ -207,7 +269,23 @@ int map_range_in_pgtbl(vaddr_t * pgtbl, vaddr_t va, paddr_t pa,
 int unmap_range_in_pgtbl(vaddr_t * pgtbl, vaddr_t va, size_t len)
 {
 	// <lab2>
+	len = ROUND_UP(len, PAGE_SIZE); // set len to be integer multiples of PAGE_SIZE
+	vaddr_t va_edge = va + len;
+	
+	while (va < va_edge)
+	{
+		ptp_t* temp_tbl = (ptp_t*)pgtbl;
+		pte_t* temp_pte;
+		for (int i = 0; i < 3; i++) // get the each level page table entries
+			get_next_ptp(temp_tbl, i, va, &temp_tbl, &temp_pte, 0);
 
+		temp_pte = &(temp_tbl->ent[GET_L3_INDEX(va)]);
+		temp_pte->pte = 0;
+
+		va += PAGE_SIZE;
+	}
+
+	flush_tlb();
 	// </lab2>
 	return 0;
 }
