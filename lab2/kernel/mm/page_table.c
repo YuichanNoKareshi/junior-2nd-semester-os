@@ -179,7 +179,8 @@ int query_in_pgtbl(vaddr_t * pgtbl, vaddr_t va, paddr_t * pa, pte_t ** entry)
 		case 1:
 			if (status == BLOCK_PTP)
 			{
-				*pa = (temp_pte->l1_block.pfn << L1_INDEX_SHIFT) | GET_VA_OFFSET_L1(va);
+				*pa = (temp_pte->l1_block.pfn << L1_INDEX_SHIFT) | GET_VA_OFFSET_L1(va); // combine pfn and va offset
+				*entry = temp_pte;
 				return 0;
 			}
 			break;
@@ -187,11 +188,13 @@ int query_in_pgtbl(vaddr_t * pgtbl, vaddr_t va, paddr_t * pa, pte_t ** entry)
 			if (status == BLOCK_PTP)
 			{
 				*pa = (temp_pte->l2_block.pfn << L2_INDEX_SHIFT) | GET_VA_OFFSET_L2(va);
+				*entry = temp_pte;
 				return 0;
 			}
 			break;
 		case 3:
 			*pa = (temp_pte->l3_page.pfn << L3_INDEX_SHIFT) | GET_VA_OFFSET_L3(va);
+			*entry = temp_pte;
 			return 0;
 		default: return 0;
 		}
@@ -219,7 +222,7 @@ int map_range_in_pgtbl(vaddr_t * pgtbl, vaddr_t va, paddr_t pa,
 		       size_t len, vmr_prop_t flags)
 {
 	// <lab2>
-	len = ROUND_UP(len, PAGE_SIZE); // set len to be integer multiples of PAGE_SIZE
+	len = ROUND_UP(len, PAGE_SIZE); // convert len to integer multiples of PAGE_SIZE
 	vaddr_t va_edge = va + len;
 	
 	while (va < va_edge)
@@ -239,8 +242,7 @@ int map_range_in_pgtbl(vaddr_t * pgtbl, vaddr_t va, paddr_t pa,
 		temp_pte = &(temp_tbl->ent[GET_L3_INDEX(va)]); // now temp_tbl is at l3_page, get corresponding pte
 		set_pte_flags(temp_pte, flags, USER_PTE);
 
-		temp_pte->pte = 0;
-		temp_pte->l3_page.pfn = pa >> PAGE_SHIFT;
+		temp_pte->l3_page.pfn = pa >> PAGE_SHIFT; // physical page number
 		temp_pte->l3_page.is_valid = 1;
 		temp_pte->l3_page.is_page = 1;
 
@@ -269,7 +271,7 @@ int map_range_in_pgtbl(vaddr_t * pgtbl, vaddr_t va, paddr_t pa,
 int unmap_range_in_pgtbl(vaddr_t * pgtbl, vaddr_t va, size_t len)
 {
 	// <lab2>
-	len = ROUND_UP(len, PAGE_SIZE); // set len to be integer multiples of PAGE_SIZE
+	len = ROUND_UP(len, PAGE_SIZE); // convert len to integer multiples of PAGE_SIZE
 	vaddr_t va_edge = va + len;
 	
 	while (va < va_edge)

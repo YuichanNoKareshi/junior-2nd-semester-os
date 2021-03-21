@@ -51,7 +51,20 @@ unsigned long get_ttbr1(void)
 void map_kernel_space(vaddr_t va, paddr_t pa, size_t len)
 {
 	// <lab2>
+	unsigned long* pgd = get_ttbr1() + KBASE;
+	len = ROUND_UP(len, PAGE_SIZE << 9); // convert len to integer multiples of PAGE_SIZE<<9
 
+	for (size_t i = 0; i < len; i += (PAGE_SIZE << 9))
+	{
+		unsigned l0_offset = (((va + i) >> (12+9+9+9)) & 0x1ff);
+		unsigned long* l1_tbl = (pgd[l0_offset] & ~0xff) + KBASE;
+
+		unsigned l1_offset = (((va + i) >> (12+9+9)) & 0x1ff);
+		unsigned long* l2_tbl = (l1_tbl[l1_offset] & ~0xff) + KBASE;
+
+		unsigned l2_offset = (((va + i) >> (12+9)) & 0x1ff);
+		l2_tbl[l2_offset] = (pa + i) | (0x1UL << 54) | (0x1UL << 10) | (0x3UL << 8) | (0x4UL << 2) | (0x1UL << 0);
+	}
 	// </lab2>
 }
 
