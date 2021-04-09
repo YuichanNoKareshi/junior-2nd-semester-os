@@ -104,7 +104,7 @@ Cannot find bounds of current function
 => 0x0:	<error: Cannot access memory at address 0x0>
 ```
 + START函数执行结束后程序计数器的值为0x0
-+ 发生这一现象的原因可能是：START调用了_start_c，_start_c继续调用了main，当调用结束后应该返回父函数或调用sys_exit，但是既没有父函数也没有调用exit，于是pc指向了0x0
++ 发生这一现象的原因可能是：START调用了_start_c，_start_c继续调用了main，当调用结束后START应该调用sys_exit结束线程，但是缺少了这步，导致指令终止，pc指向了0x0
 + 修改了kernel/mm/vm_syscall.c中的sys_handle_brk函数，以及kernel/syscall/syscall.c中的sys_putc函数和常量syscall_table
 
 ### 练习8：在合适的地方添加对sys_exit的调用，使用户主线程能够正常退出。一般而言，退出当前线程后，内核中的调度器会将当前线程移出调度队列，并继续从调度队列中选择下一个可执行的线程进行执行。然而，由于目前 ChCore 中仅包含一个线程，因此，在唯一的用户线程退出后，ChCore将中止内核的运行并直接退出。后续实验会对这一问题进行修复
