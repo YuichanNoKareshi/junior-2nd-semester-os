@@ -52,7 +52,7 @@ struct thread idle_threads[PLAT_CPU_NUM];
 int rr_sched_enqueue(struct thread *thread)
 {
 	if (thread == NULL || thread->thread_ctx == NULL || thread->thread_ctx->state == TS_READY)
-		return -1;
+		return -EINVAL;
 	else if (thread->thread_ctx->type == TYPE_IDLE)
 		return 0;
 
@@ -63,7 +63,7 @@ int rr_sched_enqueue(struct thread *thread)
 	}
 
 	if (affinity >= PLAT_CPU_NUM)
-		return -1;
+		return -EINVAL;
 
 	thread->thread_ctx->state = TS_READY;
 	thread->thread_ctx->cpuid = affinity;

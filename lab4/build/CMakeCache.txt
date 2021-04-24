@@ -195,7 +195,7 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //No help, variable specified on the command line.
-TEST:UNINITIALIZED="/spawn_basic.bin"
+TEST:UNINITIALIZED="/ipc_reg.bin"
 
 //Value Computed by CMake
 chos_BINARY_DIR:STATIC=/chos/build

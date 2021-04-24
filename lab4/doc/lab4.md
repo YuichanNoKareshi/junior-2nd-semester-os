@@ -147,4 +147,24 @@ END_FUNC(_start)
 
 ## <font color="red">第三部分：spawn()</font>
 
-### 练习14：在user/lib/spawn.c中实现spawn()
+### 练习14：在user/lib/spawn.c中实现spawn()。注意：本练习只需用正确的表达式替换所有LAB4_SPAWN_BLANK即可
+&emsp;&emsp;见代码
+
+### 练习15：在user/lib/spawn.c中实现spawn()
++ A: 检查nr_pmo_map_reqs>0，然后用pmo_map_reqs调用sys_map_pmos()
++ B: 检查nr_caps>0，然后用caps调用usys_transfer_caps()
+完成基本工作流程的步骤 7 之后，应该：
++ C: 如果不为空，则设置child_process_cap和child_main_thread_cap
+
+&emsp;&emsp;见代码
+
+### 练习16：在kernel/ipc/中实现了大多数IPC相关的代码，请根据注释完成其余代码
++ sys_ipc_register_server()用于给服务器注册IPC回调函数。
++ 客户端使用sys_register_client()创建从调用者线程到目标服务器的ipc_connection
++ 客户端使用sys_ipc_call()发出IPC请求
++ sys_ipc_return()由ipc_connection线程使用
+&emsp;&emsp;修改了ipc_call.c和ipc_return.c 
+
+### 练习17：熟悉IPC的工作流程，并实现一个简化的系统调用sys_ipc_reg_call()。它与sys_ipc_call()相似，唯一的区别是sys_ipc_reg_call()的第二个参数是64位值，而不是共享内存的地址。该参数应作为ipc_dispatcher()的唯一参数直接传递到服务器线程
+&emsp;&emsp;最开始总是过不了，咨询同学之后得知需要在kernel/syscall/syscall.c的syscall_table中加入[SYS_ipc_reg_call] = sys_ipc_reg_call
+&emsp;&emsp;见代码

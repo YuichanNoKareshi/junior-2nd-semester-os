@@ -51,7 +51,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 build cmake_object_order_depends_target_kernel.img: phony || cmake_object_order_depends_target_chos-arch cmake_object_order_depends_target_chos-exception cmake_object_order_depends_target_chos-ipc cmake_object_order_depends_target_chos-mm cmake_object_order_depends_target_chos-object cmake_object_order_depends_target_chos-sched cmake_object_order_depends_target_chos-syscall cmake_object_order_depends_target_chos-tests
 
 build CMakeFiles/kernel.img.dir/boot/init_c.c.o: C_COMPILER__kernel.2eimg ../boot/init_c.c || cmake_object_order_depends_target_kernel.img
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = CMakeFiles/kernel.img.dir/boot/init_c.c.o.d
   FLAGS = -Wall -fPIC -nostdlib -nostartfiles -ffreestanding     -DCHCORE -nostdinc  -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel
@@ -61,7 +61,7 @@ build CMakeFiles/kernel.img.dir/boot/init_c.c.o: C_COMPILER__kernel.2eimg ../boo
   TARGET_PDB = kernel.img.pdb
 
 build CMakeFiles/kernel.img.dir/boot/mmu.c.o: C_COMPILER__kernel.2eimg ../boot/mmu.c || cmake_object_order_depends_target_kernel.img
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = CMakeFiles/kernel.img.dir/boot/mmu.c.o.d
   FLAGS = -Wall -fPIC -nostdlib -nostartfiles -ffreestanding     -DCHCORE -nostdinc  -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel
@@ -71,7 +71,7 @@ build CMakeFiles/kernel.img.dir/boot/mmu.c.o: C_COMPILER__kernel.2eimg ../boot/m
   TARGET_PDB = kernel.img.pdb
 
 build CMakeFiles/kernel.img.dir/boot/start.S.o: ASM_COMPILER__kernel.2eimg ../boot/start.S || cmake_object_order_depends_target_kernel.img
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = CMakeFiles/kernel.img.dir/boot/start.S.o.d
   FLAGS = -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel
@@ -81,7 +81,7 @@ build CMakeFiles/kernel.img.dir/boot/start.S.o: ASM_COMPILER__kernel.2eimg ../bo
   TARGET_PDB = kernel.img.pdb
 
 build CMakeFiles/kernel.img.dir/boot/tools.S.o: ASM_COMPILER__kernel.2eimg ../boot/tools.S || cmake_object_order_depends_target_kernel.img
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = CMakeFiles/kernel.img.dir/boot/tools.S.o.d
   FLAGS = -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel
@@ -91,7 +91,7 @@ build CMakeFiles/kernel.img.dir/boot/tools.S.o: ASM_COMPILER__kernel.2eimg ../bo
   TARGET_PDB = kernel.img.pdb
 
 build CMakeFiles/kernel.img.dir/boot/uart.c.o: C_COMPILER__kernel.2eimg ../boot/uart.c || cmake_object_order_depends_target_kernel.img
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = CMakeFiles/kernel.img.dir/boot/uart.c.o.d
   FLAGS = -Wall -fPIC -nostdlib -nostartfiles -ffreestanding     -DCHCORE -nostdinc  -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel
@@ -101,7 +101,7 @@ build CMakeFiles/kernel.img.dir/boot/uart.c.o: C_COMPILER__kernel.2eimg ../boot/
   TARGET_PDB = kernel.img.pdb
 
 build CMakeFiles/kernel.img.dir/user/binary_include.S.o: ASM_COMPILER__kernel.2eimg ../user/binary_include.S || cmake_object_order_depends_target_kernel.img
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = CMakeFiles/kernel.img.dir/user/binary_include.S.o.d
   FLAGS = -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel
@@ -166,7 +166,7 @@ build kernel/rebuild_cache: phony kernel/CMakeFiles/rebuild_cache.util
 build cmake_object_order_depends_target_chos-arch: phony || kernel/CMakeFiles/chos-arch.dir
 
 build kernel/CMakeFiles/chos-arch.dir/head.S.o: ASM_COMPILER__chos-arch ../kernel/head.S || cmake_object_order_depends_target_chos-arch
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = kernel/CMakeFiles/chos-arch.dir/head.S.o.d
   FLAGS = -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel
@@ -176,7 +176,7 @@ build kernel/CMakeFiles/chos-arch.dir/head.S.o: ASM_COMPILER__chos-arch ../kerne
   TARGET_PDB = kernel/libchos-arch.pdb
 
 build kernel/CMakeFiles/chos-arch.dir/main.c.o: C_COMPILER__chos-arch ../kernel/main.c || cmake_object_order_depends_target_chos-arch
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = kernel/CMakeFiles/chos-arch.dir/main.c.o.d
   FLAGS = -Wall -fPIC -nostdlib -nostartfiles -ffreestanding     -DCHCORE -nostdinc  -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel
@@ -186,7 +186,7 @@ build kernel/CMakeFiles/chos-arch.dir/main.c.o: C_COMPILER__chos-arch ../kernel/
   TARGET_PDB = kernel/libchos-arch.pdb
 
 build kernel/CMakeFiles/chos-arch.dir/monitor.c.o: C_COMPILER__chos-arch ../kernel/monitor.c || cmake_object_order_depends_target_chos-arch
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = kernel/CMakeFiles/chos-arch.dir/monitor.c.o.d
   FLAGS = -Wall -fPIC -nostdlib -nostartfiles -ffreestanding     -DCHCORE -nostdinc  -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel
@@ -196,7 +196,7 @@ build kernel/CMakeFiles/chos-arch.dir/monitor.c.o: C_COMPILER__chos-arch ../kern
   TARGET_PDB = kernel/libchos-arch.pdb
 
 build kernel/CMakeFiles/chos-arch.dir/common/tools.S.o: ASM_COMPILER__chos-arch ../kernel/common/tools.S || cmake_object_order_depends_target_chos-arch
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = kernel/CMakeFiles/chos-arch.dir/common/tools.S.o.d
   FLAGS = -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel
@@ -206,7 +206,7 @@ build kernel/CMakeFiles/chos-arch.dir/common/tools.S.o: ASM_COMPILER__chos-arch 
   TARGET_PDB = kernel/libchos-arch.pdb
 
 build kernel/CMakeFiles/chos-arch.dir/common/smp.c.o: C_COMPILER__chos-arch ../kernel/common/smp.c || cmake_object_order_depends_target_chos-arch
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = kernel/CMakeFiles/chos-arch.dir/common/smp.c.o.d
   FLAGS = -Wall -fPIC -nostdlib -nostartfiles -ffreestanding     -DCHCORE -nostdinc  -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel
@@ -216,7 +216,7 @@ build kernel/CMakeFiles/chos-arch.dir/common/smp.c.o: C_COMPILER__chos-arch ../k
   TARGET_PDB = kernel/libchos-arch.pdb
 
 build kernel/CMakeFiles/chos-arch.dir/common/cpio.c.o: C_COMPILER__chos-arch ../kernel/common/cpio.c || cmake_object_order_depends_target_chos-arch
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = kernel/CMakeFiles/chos-arch.dir/common/cpio.c.o.d
   FLAGS = -Wall -fPIC -nostdlib -nostartfiles -ffreestanding     -DCHCORE -nostdinc  -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel
@@ -226,7 +226,7 @@ build kernel/CMakeFiles/chos-arch.dir/common/cpio.c.o: C_COMPILER__chos-arch ../
   TARGET_PDB = kernel/libchos-arch.pdb
 
 build kernel/CMakeFiles/chos-arch.dir/common/elf.c.o: C_COMPILER__chos-arch ../kernel/common/elf.c || cmake_object_order_depends_target_chos-arch
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = kernel/CMakeFiles/chos-arch.dir/common/elf.c.o.d
   FLAGS = -Wall -fPIC -nostdlib -nostartfiles -ffreestanding     -DCHCORE -nostdinc  -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel
@@ -236,7 +236,7 @@ build kernel/CMakeFiles/chos-arch.dir/common/elf.c.o: C_COMPILER__chos-arch ../k
   TARGET_PDB = kernel/libchos-arch.pdb
 
 build kernel/CMakeFiles/chos-arch.dir/common/uart.c.o: C_COMPILER__chos-arch ../kernel/common/uart.c || cmake_object_order_depends_target_chos-arch
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = kernel/CMakeFiles/chos-arch.dir/common/uart.c.o.d
   FLAGS = -Wall -fPIC -nostdlib -nostartfiles -ffreestanding     -DCHCORE -nostdinc  -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel
@@ -246,7 +246,7 @@ build kernel/CMakeFiles/chos-arch.dir/common/uart.c.o: C_COMPILER__chos-arch ../
   TARGET_PDB = kernel/libchos-arch.pdb
 
 build kernel/CMakeFiles/chos-arch.dir/common/lock.c.o: C_COMPILER__chos-arch ../kernel/common/lock.c || cmake_object_order_depends_target_chos-arch
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = kernel/CMakeFiles/chos-arch.dir/common/lock.c.o.d
   FLAGS = -Wall -fPIC -nostdlib -nostartfiles -ffreestanding     -DCHCORE -nostdinc  -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel
@@ -256,7 +256,7 @@ build kernel/CMakeFiles/chos-arch.dir/common/lock.c.o: C_COMPILER__chos-arch ../
   TARGET_PDB = kernel/libchos-arch.pdb
 
 build kernel/CMakeFiles/chos-arch.dir/common/printk.c.o: C_COMPILER__chos-arch ../kernel/common/printk.c || cmake_object_order_depends_target_chos-arch
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = kernel/CMakeFiles/chos-arch.dir/common/printk.c.o.d
   FLAGS = -Wall -fPIC -nostdlib -nostartfiles -ffreestanding     -DCHCORE -nostdinc  -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel
@@ -266,7 +266,7 @@ build kernel/CMakeFiles/chos-arch.dir/common/printk.c.o: C_COMPILER__chos-arch .
   TARGET_PDB = kernel/libchos-arch.pdb
 
 build kernel/CMakeFiles/chos-arch.dir/common/fs.c.o: C_COMPILER__chos-arch ../kernel/common/fs.c || cmake_object_order_depends_target_chos-arch
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = kernel/CMakeFiles/chos-arch.dir/common/fs.c.o.d
   FLAGS = -Wall -fPIC -nostdlib -nostartfiles -ffreestanding     -DCHCORE -nostdinc  -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel
@@ -276,7 +276,7 @@ build kernel/CMakeFiles/chos-arch.dir/common/fs.c.o: C_COMPILER__chos-arch ../ke
   TARGET_PDB = kernel/libchos-arch.pdb
 
 build kernel/CMakeFiles/chos-arch.dir/common/radix.c.o: C_COMPILER__chos-arch ../kernel/common/radix.c || cmake_object_order_depends_target_chos-arch
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = kernel/CMakeFiles/chos-arch.dir/common/radix.c.o.d
   FLAGS = -Wall -fPIC -nostdlib -nostartfiles -ffreestanding     -DCHCORE -nostdinc  -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel
@@ -340,7 +340,7 @@ build kernel/mm/rebuild_cache: phony kernel/mm/CMakeFiles/rebuild_cache.util
 build cmake_object_order_depends_target_chos-mm: phony || kernel/mm/CMakeFiles/chos-mm.dir
 
 build kernel/mm/CMakeFiles/chos-mm.dir/buddy.c.o: C_COMPILER__chos-mm ../kernel/mm/buddy.c || cmake_object_order_depends_target_chos-mm
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = kernel/mm/CMakeFiles/chos-mm.dir/buddy.c.o.d
   FLAGS = -Wall -fPIC -nostdlib -nostartfiles -ffreestanding     -DCHCORE -nostdinc  -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel -I../kernel/mm/include
@@ -350,7 +350,7 @@ build kernel/mm/CMakeFiles/chos-mm.dir/buddy.c.o: C_COMPILER__chos-mm ../kernel/
   TARGET_PDB = ""
 
 build kernel/mm/CMakeFiles/chos-mm.dir/kmalloc.c.o: C_COMPILER__chos-mm ../kernel/mm/kmalloc.c || cmake_object_order_depends_target_chos-mm
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = kernel/mm/CMakeFiles/chos-mm.dir/kmalloc.c.o.d
   FLAGS = -Wall -fPIC -nostdlib -nostartfiles -ffreestanding     -DCHCORE -nostdinc  -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel -I../kernel/mm/include
@@ -360,7 +360,7 @@ build kernel/mm/CMakeFiles/chos-mm.dir/kmalloc.c.o: C_COMPILER__chos-mm ../kerne
   TARGET_PDB = ""
 
 build kernel/mm/CMakeFiles/chos-mm.dir/mm.c.o: C_COMPILER__chos-mm ../kernel/mm/mm.c || cmake_object_order_depends_target_chos-mm
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = kernel/mm/CMakeFiles/chos-mm.dir/mm.c.o.d
   FLAGS = -Wall -fPIC -nostdlib -nostartfiles -ffreestanding     -DCHCORE -nostdinc  -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel -I../kernel/mm/include
@@ -370,7 +370,7 @@ build kernel/mm/CMakeFiles/chos-mm.dir/mm.c.o: C_COMPILER__chos-mm ../kernel/mm/
   TARGET_PDB = ""
 
 build kernel/mm/CMakeFiles/chos-mm.dir/page_table.S.o: ASM_COMPILER__chos-mm ../kernel/mm/page_table.S || cmake_object_order_depends_target_chos-mm
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = kernel/mm/CMakeFiles/chos-mm.dir/page_table.S.o.d
   FLAGS = -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel -I../kernel/mm/include
@@ -380,7 +380,7 @@ build kernel/mm/CMakeFiles/chos-mm.dir/page_table.S.o: ASM_COMPILER__chos-mm ../
   TARGET_PDB = ""
 
 build kernel/mm/CMakeFiles/chos-mm.dir/page_table.c.o: C_COMPILER__chos-mm ../kernel/mm/page_table.c || cmake_object_order_depends_target_chos-mm
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = kernel/mm/CMakeFiles/chos-mm.dir/page_table.c.o.d
   FLAGS = -Wall -fPIC -nostdlib -nostartfiles -ffreestanding     -DCHCORE -nostdinc  -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel -I../kernel/mm/include
@@ -390,7 +390,7 @@ build kernel/mm/CMakeFiles/chos-mm.dir/page_table.c.o: C_COMPILER__chos-mm ../ke
   TARGET_PDB = ""
 
 build kernel/mm/CMakeFiles/chos-mm.dir/slab.c.o: C_COMPILER__chos-mm ../kernel/mm/slab.c || cmake_object_order_depends_target_chos-mm
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = kernel/mm/CMakeFiles/chos-mm.dir/slab.c.o.d
   FLAGS = -Wall -fPIC -nostdlib -nostartfiles -ffreestanding     -DCHCORE -nostdinc  -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel -I../kernel/mm/include
@@ -400,7 +400,7 @@ build kernel/mm/CMakeFiles/chos-mm.dir/slab.c.o: C_COMPILER__chos-mm ../kernel/m
   TARGET_PDB = ""
 
 build kernel/mm/CMakeFiles/chos-mm.dir/uaccess.c.o: C_COMPILER__chos-mm ../kernel/mm/uaccess.c || cmake_object_order_depends_target_chos-mm
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = kernel/mm/CMakeFiles/chos-mm.dir/uaccess.c.o.d
   FLAGS = -Wall -fPIC -nostdlib -nostartfiles -ffreestanding     -DCHCORE -nostdinc  -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel -I../kernel/mm/include
@@ -410,7 +410,7 @@ build kernel/mm/CMakeFiles/chos-mm.dir/uaccess.c.o: C_COMPILER__chos-mm ../kerne
   TARGET_PDB = ""
 
 build kernel/mm/CMakeFiles/chos-mm.dir/vm_syscall.c.o: C_COMPILER__chos-mm ../kernel/mm/vm_syscall.c || cmake_object_order_depends_target_chos-mm
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = kernel/mm/CMakeFiles/chos-mm.dir/vm_syscall.c.o.d
   FLAGS = -Wall -fPIC -nostdlib -nostartfiles -ffreestanding     -DCHCORE -nostdinc  -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel -I../kernel/mm/include
@@ -420,7 +420,7 @@ build kernel/mm/CMakeFiles/chos-mm.dir/vm_syscall.c.o: C_COMPILER__chos-mm ../ke
   TARGET_PDB = ""
 
 build kernel/mm/CMakeFiles/chos-mm.dir/vmregion.c.o: C_COMPILER__chos-mm ../kernel/mm/vmregion.c || cmake_object_order_depends_target_chos-mm
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = kernel/mm/CMakeFiles/chos-mm.dir/vmregion.c.o.d
   FLAGS = -Wall -fPIC -nostdlib -nostartfiles -ffreestanding     -DCHCORE -nostdinc  -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel -I../kernel/mm/include
@@ -474,7 +474,7 @@ build kernel/process/rebuild_cache: phony kernel/process/CMakeFiles/rebuild_cach
 build cmake_object_order_depends_target_chos-object: phony || kernel/process/CMakeFiles/chos-object.dir
 
 build kernel/process/CMakeFiles/chos-object.dir/capability.c.o: C_COMPILER__chos-object ../kernel/process/capability.c || cmake_object_order_depends_target_chos-object
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = kernel/process/CMakeFiles/chos-object.dir/capability.c.o.d
   FLAGS = -Wall -fPIC -nostdlib -nostartfiles -ffreestanding     -DCHCORE -nostdinc  -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel -I../kernel/process/include
@@ -484,7 +484,7 @@ build kernel/process/CMakeFiles/chos-object.dir/capability.c.o: C_COMPILER__chos
   TARGET_PDB = ""
 
 build kernel/process/CMakeFiles/chos-object.dir/process.c.o: C_COMPILER__chos-object ../kernel/process/process.c || cmake_object_order_depends_target_chos-object
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = kernel/process/CMakeFiles/chos-object.dir/process.c.o.d
   FLAGS = -Wall -fPIC -nostdlib -nostartfiles -ffreestanding     -DCHCORE -nostdinc  -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel -I../kernel/process/include
@@ -494,7 +494,7 @@ build kernel/process/CMakeFiles/chos-object.dir/process.c.o: C_COMPILER__chos-ob
   TARGET_PDB = ""
 
 build kernel/process/CMakeFiles/chos-object.dir/thread.c.o: C_COMPILER__chos-object ../kernel/process/thread.c || cmake_object_order_depends_target_chos-object
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = kernel/process/CMakeFiles/chos-object.dir/thread.c.o.d
   FLAGS = -Wall -fPIC -nostdlib -nostartfiles -ffreestanding     -DCHCORE -nostdinc  -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel -I../kernel/process/include
@@ -504,7 +504,7 @@ build kernel/process/CMakeFiles/chos-object.dir/thread.c.o: C_COMPILER__chos-obj
   TARGET_PDB = ""
 
 build kernel/process/CMakeFiles/chos-object.dir/thread_env.c.o: C_COMPILER__chos-object ../kernel/process/thread_env.c || cmake_object_order_depends_target_chos-object
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = kernel/process/CMakeFiles/chos-object.dir/thread_env.c.o.d
   FLAGS = -Wall -fPIC -nostdlib -nostartfiles -ffreestanding     -DCHCORE -nostdinc  -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel -I../kernel/process/include
@@ -558,7 +558,7 @@ build kernel/syscall/rebuild_cache: phony kernel/syscall/CMakeFiles/rebuild_cach
 build cmake_object_order_depends_target_chos-syscall: phony || kernel/syscall/CMakeFiles/chos-syscall.dir
 
 build kernel/syscall/CMakeFiles/chos-syscall.dir/syscall.c.o: C_COMPILER__chos-syscall ../kernel/syscall/syscall.c || cmake_object_order_depends_target_chos-syscall
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = kernel/syscall/CMakeFiles/chos-syscall.dir/syscall.c.o.d
   FLAGS = -Wall -fPIC -nostdlib -nostartfiles -ffreestanding     -DCHCORE -nostdinc  -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel
@@ -612,7 +612,7 @@ build kernel/exception/rebuild_cache: phony kernel/exception/CMakeFiles/rebuild_
 build cmake_object_order_depends_target_chos-exception: phony || kernel/exception/CMakeFiles/chos-exception.dir
 
 build kernel/exception/CMakeFiles/chos-exception.dir/exception.S.o: ASM_COMPILER__chos-exception ../kernel/exception/exception.S || cmake_object_order_depends_target_chos-exception
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = kernel/exception/CMakeFiles/chos-exception.dir/exception.S.o.d
   FLAGS = -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel -I../kernel/exception/include
@@ -622,7 +622,7 @@ build kernel/exception/CMakeFiles/chos-exception.dir/exception.S.o: ASM_COMPILER
   TARGET_PDB = ""
 
 build kernel/exception/CMakeFiles/chos-exception.dir/exception.c.o: C_COMPILER__chos-exception ../kernel/exception/exception.c || cmake_object_order_depends_target_chos-exception
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = kernel/exception/CMakeFiles/chos-exception.dir/exception.c.o.d
   FLAGS = -Wall -fPIC -nostdlib -nostartfiles -ffreestanding     -DCHCORE -nostdinc  -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel -I../kernel/exception/include
@@ -632,7 +632,7 @@ build kernel/exception/CMakeFiles/chos-exception.dir/exception.c.o: C_COMPILER__
   TARGET_PDB = ""
 
 build kernel/exception/CMakeFiles/chos-exception.dir/exception_table.S.o: ASM_COMPILER__chos-exception ../kernel/exception/exception_table.S || cmake_object_order_depends_target_chos-exception
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = kernel/exception/CMakeFiles/chos-exception.dir/exception_table.S.o.d
   FLAGS = -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel -I../kernel/exception/include
@@ -642,7 +642,7 @@ build kernel/exception/CMakeFiles/chos-exception.dir/exception_table.S.o: ASM_CO
   TARGET_PDB = ""
 
 build kernel/exception/CMakeFiles/chos-exception.dir/irq.S.o: ASM_COMPILER__chos-exception ../kernel/exception/irq.S || cmake_object_order_depends_target_chos-exception
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = kernel/exception/CMakeFiles/chos-exception.dir/irq.S.o.d
   FLAGS = -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel -I../kernel/exception/include
@@ -652,7 +652,7 @@ build kernel/exception/CMakeFiles/chos-exception.dir/irq.S.o: ASM_COMPILER__chos
   TARGET_PDB = ""
 
 build kernel/exception/CMakeFiles/chos-exception.dir/irq.c.o: C_COMPILER__chos-exception ../kernel/exception/irq.c || cmake_object_order_depends_target_chos-exception
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = kernel/exception/CMakeFiles/chos-exception.dir/irq.c.o.d
   FLAGS = -Wall -fPIC -nostdlib -nostartfiles -ffreestanding     -DCHCORE -nostdinc  -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel -I../kernel/exception/include
@@ -662,7 +662,7 @@ build kernel/exception/CMakeFiles/chos-exception.dir/irq.c.o: C_COMPILER__chos-e
   TARGET_PDB = ""
 
 build kernel/exception/CMakeFiles/chos-exception.dir/pgfault.c.o: C_COMPILER__chos-exception ../kernel/exception/pgfault.c || cmake_object_order_depends_target_chos-exception
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = kernel/exception/CMakeFiles/chos-exception.dir/pgfault.c.o.d
   FLAGS = -Wall -fPIC -nostdlib -nostartfiles -ffreestanding     -DCHCORE -nostdinc  -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel -I../kernel/exception/include
@@ -672,7 +672,7 @@ build kernel/exception/CMakeFiles/chos-exception.dir/pgfault.c.o: C_COMPILER__ch
   TARGET_PDB = ""
 
 build kernel/exception/CMakeFiles/chos-exception.dir/timer.c.o: C_COMPILER__chos-exception ../kernel/exception/timer.c || cmake_object_order_depends_target_chos-exception
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = kernel/exception/CMakeFiles/chos-exception.dir/timer.c.o.d
   FLAGS = -Wall -fPIC -nostdlib -nostartfiles -ffreestanding     -DCHCORE -nostdinc  -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel -I../kernel/exception/include
@@ -726,7 +726,7 @@ build kernel/sched/rebuild_cache: phony kernel/sched/CMakeFiles/rebuild_cache.ut
 build cmake_object_order_depends_target_chos-sched: phony || kernel/sched/CMakeFiles/chos-sched.dir
 
 build kernel/sched/CMakeFiles/chos-sched.dir/context.c.o: C_COMPILER__chos-sched ../kernel/sched/context.c || cmake_object_order_depends_target_chos-sched
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = kernel/sched/CMakeFiles/chos-sched.dir/context.c.o.d
   FLAGS = -Wall -fPIC -nostdlib -nostartfiles -ffreestanding     -DCHCORE -nostdinc  -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel -I../kernel/sched/include
@@ -736,7 +736,7 @@ build kernel/sched/CMakeFiles/chos-sched.dir/context.c.o: C_COMPILER__chos-sched
   TARGET_PDB = ""
 
 build kernel/sched/CMakeFiles/chos-sched.dir/idle.S.o: ASM_COMPILER__chos-sched ../kernel/sched/idle.S || cmake_object_order_depends_target_chos-sched
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = kernel/sched/CMakeFiles/chos-sched.dir/idle.S.o.d
   FLAGS = -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel -I../kernel/sched/include
@@ -746,7 +746,7 @@ build kernel/sched/CMakeFiles/chos-sched.dir/idle.S.o: ASM_COMPILER__chos-sched 
   TARGET_PDB = ""
 
 build kernel/sched/CMakeFiles/chos-sched.dir/policy_rr.c.o: C_COMPILER__chos-sched ../kernel/sched/policy_rr.c || cmake_object_order_depends_target_chos-sched
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = kernel/sched/CMakeFiles/chos-sched.dir/policy_rr.c.o.d
   FLAGS = -Wall -fPIC -nostdlib -nostartfiles -ffreestanding     -DCHCORE -nostdinc  -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel -I../kernel/sched/include
@@ -756,7 +756,7 @@ build kernel/sched/CMakeFiles/chos-sched.dir/policy_rr.c.o: C_COMPILER__chos-sch
   TARGET_PDB = ""
 
 build kernel/sched/CMakeFiles/chos-sched.dir/sched.c.o: C_COMPILER__chos-sched ../kernel/sched/sched.c || cmake_object_order_depends_target_chos-sched
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = kernel/sched/CMakeFiles/chos-sched.dir/sched.c.o.d
   FLAGS = -Wall -fPIC -nostdlib -nostartfiles -ffreestanding     -DCHCORE -nostdinc  -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel -I../kernel/sched/include
@@ -810,7 +810,7 @@ build kernel/ipc/rebuild_cache: phony kernel/ipc/CMakeFiles/rebuild_cache.util
 build cmake_object_order_depends_target_chos-ipc: phony || kernel/ipc/CMakeFiles/chos-ipc.dir
 
 build kernel/ipc/CMakeFiles/chos-ipc.dir/ipc_call.c.o: C_COMPILER__chos-ipc ../kernel/ipc/ipc_call.c || cmake_object_order_depends_target_chos-ipc
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = kernel/ipc/CMakeFiles/chos-ipc.dir/ipc_call.c.o.d
   FLAGS = -Wall -fPIC -nostdlib -nostartfiles -ffreestanding     -DCHCORE -nostdinc  -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel -I../kernel/ipc/include
@@ -820,7 +820,7 @@ build kernel/ipc/CMakeFiles/chos-ipc.dir/ipc_call.c.o: C_COMPILER__chos-ipc ../k
   TARGET_PDB = ""
 
 build kernel/ipc/CMakeFiles/chos-ipc.dir/ipc_client.c.o: C_COMPILER__chos-ipc ../kernel/ipc/ipc_client.c || cmake_object_order_depends_target_chos-ipc
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = kernel/ipc/CMakeFiles/chos-ipc.dir/ipc_client.c.o.d
   FLAGS = -Wall -fPIC -nostdlib -nostartfiles -ffreestanding     -DCHCORE -nostdinc  -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel -I../kernel/ipc/include
@@ -830,7 +830,7 @@ build kernel/ipc/CMakeFiles/chos-ipc.dir/ipc_client.c.o: C_COMPILER__chos-ipc ..
   TARGET_PDB = ""
 
 build kernel/ipc/CMakeFiles/chos-ipc.dir/ipc_return.c.o: C_COMPILER__chos-ipc ../kernel/ipc/ipc_return.c || cmake_object_order_depends_target_chos-ipc
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = kernel/ipc/CMakeFiles/chos-ipc.dir/ipc_return.c.o.d
   FLAGS = -Wall -fPIC -nostdlib -nostartfiles -ffreestanding     -DCHCORE -nostdinc  -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel -I../kernel/ipc/include
@@ -840,7 +840,7 @@ build kernel/ipc/CMakeFiles/chos-ipc.dir/ipc_return.c.o: C_COMPILER__chos-ipc ..
   TARGET_PDB = ""
 
 build kernel/ipc/CMakeFiles/chos-ipc.dir/ipc_server.c.o: C_COMPILER__chos-ipc ../kernel/ipc/ipc_server.c || cmake_object_order_depends_target_chos-ipc
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = kernel/ipc/CMakeFiles/chos-ipc.dir/ipc_server.c.o.d
   FLAGS = -Wall -fPIC -nostdlib -nostartfiles -ffreestanding     -DCHCORE -nostdinc  -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel -I../kernel/ipc/include
@@ -894,7 +894,7 @@ build kernel/tests/rebuild_cache: phony kernel/tests/CMakeFiles/rebuild_cache.ut
 build cmake_object_order_depends_target_chos-tests: phony || kernel/tests/CMakeFiles/chos-tests.dir
 
 build kernel/tests/CMakeFiles/chos-tests.dir/barrier.c.o: C_COMPILER__chos-tests ../kernel/tests/barrier.c || cmake_object_order_depends_target_chos-tests
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = kernel/tests/CMakeFiles/chos-tests.dir/barrier.c.o.d
   FLAGS = -Wall -fPIC -nostdlib -nostartfiles -ffreestanding     -DCHCORE -nostdinc  -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel -I../kernel/tests/include
@@ -904,7 +904,7 @@ build kernel/tests/CMakeFiles/chos-tests.dir/barrier.c.o: C_COMPILER__chos-tests
   TARGET_PDB = ""
 
 build kernel/tests/CMakeFiles/chos-tests.dir/tests.c.o: C_COMPILER__chos-tests ../kernel/tests/tests.c || cmake_object_order_depends_target_chos-tests
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = kernel/tests/CMakeFiles/chos-tests.dir/tests.c.o.d
   FLAGS = -Wall -fPIC -nostdlib -nostartfiles -ffreestanding     -DCHCORE -nostdinc  -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel -I../kernel/tests/include
@@ -914,7 +914,7 @@ build kernel/tests/CMakeFiles/chos-tests.dir/tests.c.o: C_COMPILER__chos-tests .
   TARGET_PDB = ""
 
 build kernel/tests/CMakeFiles/chos-tests.dir/tst_mutex.c.o: C_COMPILER__chos-tests ../kernel/tests/tst_mutex.c || cmake_object_order_depends_target_chos-tests
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = kernel/tests/CMakeFiles/chos-tests.dir/tst_mutex.c.o.d
   FLAGS = -Wall -fPIC -nostdlib -nostartfiles -ffreestanding     -DCHCORE -nostdinc  -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel -I../kernel/tests/include
@@ -924,7 +924,7 @@ build kernel/tests/CMakeFiles/chos-tests.dir/tst_mutex.c.o: C_COMPILER__chos-tes
   TARGET_PDB = ""
 
 build kernel/tests/CMakeFiles/chos-tests.dir/tst_sched.c.o: C_COMPILER__chos-tests ../kernel/tests/tst_sched.c || cmake_object_order_depends_target_chos-tests
-  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/spawn_basic.bin\"
+  DEFINES = -DLOG_LEVEL=1 -DTEST=\"/ipc_reg.bin\"
   DEP_FILE = kernel/tests/CMakeFiles/chos-tests.dir/tst_sched.c.o.d
   FLAGS = -Wall -fPIC -nostdlib -nostartfiles -ffreestanding     -DCHCORE -nostdinc  -O3 -DNDEBUG
   INCLUDES = -I../. -I../kernel -I../kernel/tests/include
