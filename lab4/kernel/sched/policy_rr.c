@@ -57,17 +57,25 @@ int rr_sched_enqueue(struct thread *thread)
 		return 0;
 
 	s32 affinity = thread->thread_ctx->affinity;
-	if (affinity == NO_AFF)
+	if (affinity == NO_AFF) 
 	{
-		affinity = smp_get_cpu_id();
+		list_append(&thread->ready_queue_node, &rr_ready_queue[smp_get_cpu_id()]);
+		thread->thread_ctx->state = TS_READY;
+		thread->thread_ctx->cpuid = smp_get_cpu_id();
+	} 
+	else 
+	{
+		if (affinity < 0 || affinity > PLAT_CPU_NUM)
+			return -EINVAL;
+		
+		list_append(&thread->ready_queue_node, &rr_ready_queue[affinity]);
+		thread->thread_ctx->state = TS_READY;
+		thread->thread_ctx->cpuid = affinity;
 	}
 
-	if (affinity >= PLAT_CPU_NUM)
-		return -EINVAL;
-
-	thread->thread_ctx->state = TS_READY;
-	thread->thread_ctx->cpuid = affinity;
-	list_append(&thread->ready_queue_node, &rr_ready_queue[affinity]);
+	// thread->thread_ctx->state = TS_READY;
+	// thread->thread_ctx->cpuid = affinity;
+	// list_append(&thread->ready_queue_node, &rr_ready_queue[affinity]);
 
 	return 0;
 }

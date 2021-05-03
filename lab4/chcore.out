@@ -41,4 +41,4 @@ LR ffffff000008c018 FP ffffff00000f3d00 Args 87408 ffffffc0 0 ffffff000008c018 0
 [Client] Return 526!
 [Client] exit
 [Server] exit
-qemu-system-aarch64: terminating on signal 15 from pid 101893 (make)
+qemu-system-aarch64: terminating on signal 15 from pid 137241 (make)
