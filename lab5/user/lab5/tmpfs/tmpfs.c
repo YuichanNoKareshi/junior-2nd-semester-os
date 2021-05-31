@@ -126,7 +126,7 @@ static int tfs_mknod(struct inode *dir, const char *name, size_t len, int mkdir)
 	BUG_ON(!name);
 
 	if (len == 0) {
-		WARN("mknod with len of 0");
+		// WARN("mknod with len of 0");
 		// return -ENOENT;
 	}
 	// TODO: write your code here
