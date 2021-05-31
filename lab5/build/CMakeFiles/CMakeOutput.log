@@ -1,0 +1,166 @@
+The system is: Linux - 5.8.0-53-generic - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/bin/aarch64-linux-gnu-gcc 
+Build flags: -Wall;-fPIC;-nostdlib;-nostartfiles;-ffreestanding;;;;;-DCHCORE;-nostdinc;
+Id flags:  
+
+The output was:
+0
+/usr/lib/gcc-cross/aarch64-linux-gnu/7/../../../../aarch64-linux-gnu/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000000388
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/chos/build/CMakeFiles/3.15.5/CompilerIdC/a.out"
+
+Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+aarch64-linux-gnu-gcc (Ubuntu/Linaro 7.4.0-1ubuntu1~18.04.1) 7.4.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /chos/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_38e36 && [1/2] Building C object CMakeFiles/cmTC_38e36.dir/testCCompiler.c.o
+[2/2] Linking C executable cmTC_38e36
+/usr/lib/gcc-cross/aarch64-linux-gnu/7/../../../../aarch64-linux-gnu/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000000294
+
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /chos/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_ead3a && [1/2] Building C object CMakeFiles/cmTC_ead3a.dir/CMakeCCompilerABI.c.o
+Using built-in specs.
+COLLECT_GCC=/usr/bin/aarch64-linux-gnu-gcc
+Target: aarch64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu/Linaro 7.4.0-1ubuntu1~18.04.1' --with-bugurl=file:///usr/share/doc/gcc-7/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-7 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-multiarch --enable-fix-cortex-a53-843419 --disable-werror --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=aarch64-linux-gnu --program-prefix=aarch64-linux-gnu- --includedir=/usr/aarch64-linux-gnu/include
+Thread model: posix
+gcc version 7.4.0 (Ubuntu/Linaro 7.4.0-1ubuntu1~18.04.1) 
+COLLECT_GCC_OPTIONS='-Wall' '-fPIC' '-nostdlib' '-nostartfiles' '-ffreestanding' '-D' 'CHCORE' '-nostdinc' '-v' '-o' 'CMakeFiles/cmTC_ead3a.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64'
+ /usr/lib/gcc-cross/aarch64-linux-gnu/7/cc1 -quiet -nostdinc -v -imultiarch aarch64-linux-gnu -D CHCORE /usr/local/share/cmake-3.15/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mlittle-endian -mabi=lp64 -auxbase-strip CMakeFiles/cmTC_ead3a.dir/CMakeCCompilerABI.c.o -Wall -version -fPIC -ffreestanding -Wformat-security -o /tmp/ccxM3Xm8.s
+GNU C11 (Ubuntu/Linaro 7.4.0-1ubuntu1~18.04.1) version 7.4.0 (aarch64-linux-gnu)
+	compiled by GNU C version 7.4.0, GMP version 6.1.2, MPFR version 4.0.1, MPC version 1.1.0, isl version isl-0.19-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+#include "..." search starts here:
+#include <...> search starts here:
+End of search list.
+GNU C11 (Ubuntu/Linaro 7.4.0-1ubuntu1~18.04.1) version 7.4.0 (aarch64-linux-gnu)
+	compiled by GNU C version 7.4.0, GMP version 6.1.2, MPFR version 4.0.1, MPC version 1.1.0, isl version isl-0.19-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: e51840c02be487475483fef1c1824e06
+COLLECT_GCC_OPTIONS='-Wall' '-fPIC' '-nostdlib' '-nostartfiles' '-ffreestanding' '-D' 'CHCORE' '-nostdinc' '-v' '-o' 'CMakeFiles/cmTC_ead3a.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64'
+ /usr/lib/gcc-cross/aarch64-linux-gnu/7/../../../../aarch64-linux-gnu/bin/as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_ead3a.dir/CMakeCCompilerABI.c.o /tmp/ccxM3Xm8.s
+GNU assembler version 2.30 (aarch64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.30
+COMPILER_PATH=/usr/lib/gcc-cross/aarch64-linux-gnu/7/:/usr/lib/gcc-cross/aarch64-linux-gnu/7/:/usr/lib/gcc-cross/aarch64-linux-gnu/:/usr/lib/gcc-cross/aarch64-linux-gnu/7/:/usr/lib/gcc-cross/aarch64-linux-gnu/:/usr/lib/gcc-cross/aarch64-linux-gnu/7/../../../../aarch64-linux-gnu/bin/
+LIBRARY_PATH=/usr/lib/gcc-cross/aarch64-linux-gnu/7/:/usr/lib/gcc-cross/aarch64-linux-gnu/7/../../../../aarch64-linux-gnu/lib/../lib/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc-cross/aarch64-linux-gnu/7/../../../../aarch64-linux-gnu/lib/:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-Wall' '-fPIC' '-nostdlib' '-nostartfiles' '-ffreestanding' '-D' 'CHCORE' '-nostdinc' '-v' '-o' 'CMakeFiles/cmTC_ead3a.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64'
+[2/2] Linking C executable cmTC_ead3a
+Using built-in specs.
+COLLECT_GCC=/usr/bin/aarch64-linux-gnu-gcc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc-cross/aarch64-linux-gnu/7/lto-wrapper
+Target: aarch64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu/Linaro 7.4.0-1ubuntu1~18.04.1' --with-bugurl=file:///usr/share/doc/gcc-7/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-7 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-multiarch --enable-fix-cortex-a53-843419 --disable-werror --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=aarch64-linux-gnu --program-prefix=aarch64-linux-gnu- --includedir=/usr/aarch64-linux-gnu/include
+Thread model: posix
+gcc version 7.4.0 (Ubuntu/Linaro 7.4.0-1ubuntu1~18.04.1) 
+COMPILER_PATH=/usr/lib/gcc-cross/aarch64-linux-gnu/7/:/usr/lib/gcc-cross/aarch64-linux-gnu/7/:/usr/lib/gcc-cross/aarch64-linux-gnu/:/usr/lib/gcc-cross/aarch64-linux-gnu/7/:/usr/lib/gcc-cross/aarch64-linux-gnu/:/usr/lib/gcc-cross/aarch64-linux-gnu/7/../../../../aarch64-linux-gnu/bin/
+LIBRARY_PATH=/usr/lib/gcc-cross/aarch64-linux-gnu/7/:/usr/lib/gcc-cross/aarch64-linux-gnu/7/../../../../aarch64-linux-gnu/lib/../lib/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc-cross/aarch64-linux-gnu/7/../../../../aarch64-linux-gnu/lib/:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-Wall' '-fPIC' '-nostdlib' '-nostartfiles' '-ffreestanding' '-D' 'CHCORE' '-nostdinc' '-v' '-o' 'cmTC_ead3a' '-mlittle-endian' '-mabi=lp64'
+ /usr/lib/gcc-cross/aarch64-linux-gnu/7/collect2 -plugin /usr/lib/gcc-cross/aarch64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc-cross/aarch64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccYgZ5X9.res --sysroot=/ --build-id --eh-frame-hdr --hash-style=gnu --as-needed -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -z now -z relro -o cmTC_ead3a -L/usr/lib/gcc-cross/aarch64-linux-gnu/7 -L/usr/lib/gcc-cross/aarch64-linux-gnu/7/../../../../aarch64-linux-gnu/lib/../lib -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc-cross/aarch64-linux-gnu/7/../../../../aarch64-linux-gnu/lib CMakeFiles/cmTC_ead3a.dir/CMakeCCompilerABI.c.o
+/usr/lib/gcc-cross/aarch64-linux-gnu/7/../../../../aarch64-linux-gnu/bin/ld: warning: cannot find entry symbol _start; defaulting to 00000000000002b0
+COLLECT_GCC_OPTIONS='-Wall' '-fPIC' '-nostdlib' '-nostartfiles' '-ffreestanding' '-D' 'CHCORE' '-nostdinc' '-v' '-o' 'cmTC_ead3a' '-mlittle-endian' '-mabi=lp64'
+
+
+
+Parsed C implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+  end of search list found
+  implicit include dirs: []
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(aarch64-linux-gnu-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /chos/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/ninja cmTC_ead3a && [1/2] Building C object CMakeFiles/cmTC_ead3a.dir/CMakeCCompilerABI.c.o]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/aarch64-linux-gnu-gcc]
+  ignore line: [Target: aarch64-linux-gnu]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu/Linaro 7.4.0-1ubuntu1~18.04.1' --with-bugurl=file:///usr/share/doc/gcc-7/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-7 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-multiarch --enable-fix-cortex-a53-843419 --disable-werror --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=aarch64-linux-gnu --program-prefix=aarch64-linux-gnu- --includedir=/usr/aarch64-linux-gnu/include]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 7.4.0 (Ubuntu/Linaro 7.4.0-1ubuntu1~18.04.1) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-Wall' '-fPIC' '-nostdlib' '-nostartfiles' '-ffreestanding' '-D' 'CHCORE' '-nostdinc' '-v' '-o' 'CMakeFiles/cmTC_ead3a.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64']
+  ignore line: [ /usr/lib/gcc-cross/aarch64-linux-gnu/7/cc1 -quiet -nostdinc -v -imultiarch aarch64-linux-gnu -D CHCORE /usr/local/share/cmake-3.15/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mlittle-endian -mabi=lp64 -auxbase-strip CMakeFiles/cmTC_ead3a.dir/CMakeCCompilerABI.c.o -Wall -version -fPIC -ffreestanding -Wformat-security -o /tmp/ccxM3Xm8.s]
+  ignore line: [GNU C11 (Ubuntu/Linaro 7.4.0-1ubuntu1~18.04.1) version 7.4.0 (aarch64-linux-gnu)]
+  ignore line: [	compiled by GNU C version 7.4.0, GMP version 6.1.2, MPFR version 4.0.1, MPC version 1.1.0, isl version isl-0.19-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [End of search list.]
+  ignore line: [GNU C11 (Ubuntu/Linaro 7.4.0-1ubuntu1~18.04.1) version 7.4.0 (aarch64-linux-gnu)]
+  ignore line: [	compiled by GNU C version 7.4.0, GMP version 6.1.2, MPFR version 4.0.1, MPC version 1.1.0, isl version isl-0.19-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: e51840c02be487475483fef1c1824e06]
+  ignore line: [COLLECT_GCC_OPTIONS='-Wall' '-fPIC' '-nostdlib' '-nostartfiles' '-ffreestanding' '-D' 'CHCORE' '-nostdinc' '-v' '-o' 'CMakeFiles/cmTC_ead3a.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64']
+  ignore line: [ /usr/lib/gcc-cross/aarch64-linux-gnu/7/../../../../aarch64-linux-gnu/bin/as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_ead3a.dir/CMakeCCompilerABI.c.o /tmp/ccxM3Xm8.s]
+  ignore line: [GNU assembler version 2.30 (aarch64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.30]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc-cross/aarch64-linux-gnu/7/:/usr/lib/gcc-cross/aarch64-linux-gnu/7/:/usr/lib/gcc-cross/aarch64-linux-gnu/:/usr/lib/gcc-cross/aarch64-linux-gnu/7/:/usr/lib/gcc-cross/aarch64-linux-gnu/:/usr/lib/gcc-cross/aarch64-linux-gnu/7/../../../../aarch64-linux-gnu/bin/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc-cross/aarch64-linux-gnu/7/:/usr/lib/gcc-cross/aarch64-linux-gnu/7/../../../../aarch64-linux-gnu/lib/../lib/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc-cross/aarch64-linux-gnu/7/../../../../aarch64-linux-gnu/lib/:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-Wall' '-fPIC' '-nostdlib' '-nostartfiles' '-ffreestanding' '-D' 'CHCORE' '-nostdinc' '-v' '-o' 'CMakeFiles/cmTC_ead3a.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64']
+  ignore line: [[2/2] Linking C executable cmTC_ead3a]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/aarch64-linux-gnu-gcc]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc-cross/aarch64-linux-gnu/7/lto-wrapper]
+  ignore line: [Target: aarch64-linux-gnu]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu/Linaro 7.4.0-1ubuntu1~18.04.1' --with-bugurl=file:///usr/share/doc/gcc-7/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-7 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-multiarch --enable-fix-cortex-a53-843419 --disable-werror --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=aarch64-linux-gnu --program-prefix=aarch64-linux-gnu- --includedir=/usr/aarch64-linux-gnu/include]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 7.4.0 (Ubuntu/Linaro 7.4.0-1ubuntu1~18.04.1) ]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc-cross/aarch64-linux-gnu/7/:/usr/lib/gcc-cross/aarch64-linux-gnu/7/:/usr/lib/gcc-cross/aarch64-linux-gnu/:/usr/lib/gcc-cross/aarch64-linux-gnu/7/:/usr/lib/gcc-cross/aarch64-linux-gnu/:/usr/lib/gcc-cross/aarch64-linux-gnu/7/../../../../aarch64-linux-gnu/bin/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc-cross/aarch64-linux-gnu/7/:/usr/lib/gcc-cross/aarch64-linux-gnu/7/../../../../aarch64-linux-gnu/lib/../lib/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc-cross/aarch64-linux-gnu/7/../../../../aarch64-linux-gnu/lib/:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-Wall' '-fPIC' '-nostdlib' '-nostartfiles' '-ffreestanding' '-D' 'CHCORE' '-nostdinc' '-v' '-o' 'cmTC_ead3a' '-mlittle-endian' '-mabi=lp64']
+  link line: [ /usr/lib/gcc-cross/aarch64-linux-gnu/7/collect2 -plugin /usr/lib/gcc-cross/aarch64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc-cross/aarch64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccYgZ5X9.res --sysroot=/ --build-id --eh-frame-hdr --hash-style=gnu --as-needed -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -z now -z relro -o cmTC_ead3a -L/usr/lib/gcc-cross/aarch64-linux-gnu/7 -L/usr/lib/gcc-cross/aarch64-linux-gnu/7/../../../../aarch64-linux-gnu/lib/../lib -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc-cross/aarch64-linux-gnu/7/../../../../aarch64-linux-gnu/lib CMakeFiles/cmTC_ead3a.dir/CMakeCCompilerABI.c.o]
+    arg [/usr/lib/gcc-cross/aarch64-linux-gnu/7/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/lib/gcc-cross/aarch64-linux-gnu/7/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/lib/gcc-cross/aarch64-linux-gnu/7/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccYgZ5X9.res] ==> ignore
+    arg [--sysroot=/] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib/ld-linux-aarch64.so.1] ==> ignore
+    arg [-X] ==> ignore
+    arg [-EL] ==> ignore
+    arg [-maarch64linux] ==> ignore
+    arg [--fix-cortex-a53-843419] ==> ignore
+    arg [-pie] ==> ignore
+    arg [-znow] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_ead3a] ==> ignore
+    arg [-L/usr/lib/gcc-cross/aarch64-linux-gnu/7] ==> dir [/usr/lib/gcc-cross/aarch64-linux-gnu/7]
+    arg [-L/usr/lib/gcc-cross/aarch64-linux-gnu/7/../../../../aarch64-linux-gnu/lib/../lib] ==> dir [/usr/lib/gcc-cross/aarch64-linux-gnu/7/../../../../aarch64-linux-gnu/lib/../lib]
+    arg [-L/lib/../lib] ==> dir [/lib/../lib]
+    arg [-L/usr/lib/aarch64-linux-gnu] ==> dir [/usr/lib/aarch64-linux-gnu]
+    arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+    arg [-L/usr/lib/gcc-cross/aarch64-linux-gnu/7/../../../../aarch64-linux-gnu/lib] ==> dir [/usr/lib/gcc-cross/aarch64-linux-gnu/7/../../../../aarch64-linux-gnu/lib]
+    arg [CMakeFiles/cmTC_ead3a.dir/CMakeCCompilerABI.c.o] ==> ignore
+  collapse library dir [/usr/lib/gcc-cross/aarch64-linux-gnu/7] ==> [/usr/lib/gcc-cross/aarch64-linux-gnu/7]
+  collapse library dir [/usr/lib/gcc-cross/aarch64-linux-gnu/7/../../../../aarch64-linux-gnu/lib/../lib] ==> [/usr/aarch64-linux-gnu/lib]
+  collapse library dir [/lib/../lib] ==> [/lib]
+  collapse library dir [/usr/lib/aarch64-linux-gnu] ==> [/usr/lib/aarch64-linux-gnu]
+  collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+  collapse library dir [/usr/lib/gcc-cross/aarch64-linux-gnu/7/../../../../aarch64-linux-gnu/lib] ==> [/usr/aarch64-linux-gnu/lib]
+  implicit libs: []
+  implicit dirs: [/usr/lib/gcc-cross/aarch64-linux-gnu/7;/usr/aarch64-linux-gnu/lib;/lib;/usr/lib/aarch64-linux-gnu;/usr/lib]
+  implicit fwks: []
+
+

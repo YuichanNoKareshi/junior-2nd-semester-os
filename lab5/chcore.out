@@ -1,0 +1,108 @@
+*** make qemu-gdb'.
+***
+boot: init_c
+[BOOT] Install boot page table
+[BOOT] Enable el1 MMU
+[BOOT] Jump to kernel main
+[2J[INFO] [ChCore] uart init finished
+[INFO] Address of main() is 0xffffff000008c128
+[INFO] 123456 decimal is 0361100 octal
+[INFO] entering stack_test 5
+[INFO] entering stack_test 4
+[INFO] entering stack_test 3
+[INFO] entering stack_test 2
+[INFO] entering stack_test 1
+[INFO] entering stack_test 0
+Stack backtrace:
+LR ffffff000008c090 FP ffffff0000193880 Args 0 0 0 0 0 
+LR ffffff000008c090 FP ffffff00001938a0 Args 1 ffffffc0 ffffff00001938c0 ffffff000008c090 2 
+LR ffffff000008c090 FP ffffff00001938c0 Args 2 ffffffc0 ffffff00001938e0 ffffff000008c090 3 
+LR ffffff000008c090 FP ffffff00001938e0 Args 3 ffffffc0 ffffff0000193900 ffffff000008c090 4 
+LR ffffff000008c090 FP ffffff0000193900 Args 4 ffffffc0 ffffff0000193920 ffffff000008c090 5 
+LR ffffff000008c178 FP ffffff0000193920 Args 5 ffffffc0 ffffff0000193940 ffffff000008c178 87408 
+LR ffffff000008c018 FP ffffff0000193940 Args 87408 ffffffc0 0 ffffff000008c018 0 
+[INFO] leaving stack_test 0
+[INFO] leaving stack_test 1
+[INFO] leaving stack_test 2
+[INFO] leaving stack_test 3
+[INFO] leaving stack_test 4
+[INFO] leaving stack_test 5
+[INFO] mm init finished
+[INFO] [ChCore] interrupt init finished
+[INFO] [ChCore] lock init finished
+[INFO] [ChCore] sched init finished
+[INFO] AP 1 is activated!
+[INFO] AP 2 is activated!
+[INFO] AP 3 is activated!
+[INFO] All 4 CPUs are active
+[INFO] [ChCore] boot multicore finished
+[INFO] [ChCore] root thread init finished
+Start init_test.
+Booting fs...
+info_page_addr: 0x200000
+WARN: tfs_mknod:129 mknod with len of 0
+WARN: tfs_mknod:129 mknod with len of 0
+WARN: tfs_mknod:129 mknod with len of 0
+[tmpfs] register server value = 0
+fs is UP.
+> echo ls tt yy .*
+abc123XYZ
+init.bin
+.
+tmpfs.srv
+ipc_mem.bin
+spawn_basic.bin
+ipc_reg_server.bin
+spawn_child.bin
+init_test.bin
+ipc_data.bin
+yield_aff.bin
+yield_spin.bin
+yield_multi.bin
+ipc_mem_server.bin
+ipc_reg.bin
+tar
+yield_multi_aff.bin
+spawn_info.bin
+yield_single.bin
+ipc_data_server.bin
+fs_test.bin
+test
+bsdtar_windows.c
+bsdtar_windows.h
+util.c
+config_freebsd.h
+cmdline.c
+subst.c
+bsdtar.1
+cat_test.txt
+bsdtar.c
+bsdtar.h
+creation_set.c
+read.c
+write.c
+CMakeLists.txt
+bsdtar_platform.h
+apple banana This is a test file.
+> yie.*ld_spin.bin
+> sp.*awn_basic.bin
+[fs server]I am reading
+
+Current CPU 0
+===== CPU 0 =====
+Thread ffffff0020000228	Type: ROOT  	State: TS_RUNNING   	CPU 0	AFF 0	Budget 2	Prio: 254	
+Thread ffffff00200007a8	Type: USER  	State: TS_READY     	CPU 0	AFF 0	Budget 0	Prio: 254	
+Thread ffffff0020000da8	Type: USER  	State: TS_READY     	CPU 0	AFF 0	Budget 2	Prio: 254	
+===== CPU 1 =====
+Thread ffffff0000199ce8	Type: IDLE  	State: TS_RUNNING   	CPU 1	AFF 1	Budget 2	Prio: 0	
+===== CPU 2 =====
+Thread ffffff0000199d40	Type: IDLE  	State: TS_RUNNING   	CPU 2	AFF 2	Budget 2	Prio: 0	
+===== CPU 3 =====
+Thread ffffff0000199d98	Type: IDLE  	State: TS_RUNNING   	CPU 3	AFF 3	Budget 2	Prio: 0	
+
+End init_test.
+[Parent] create the server process.
+[Server] read deadbeef
+[Client] exit
+[Server] exit
+qemu-system-aarch64: terminating on signal 15 from pid 140832 (make)
